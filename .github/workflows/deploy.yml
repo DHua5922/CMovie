@@ -2,8 +2,9 @@ name: React app deployement
 
 on:
   push:
-    branches: master
-    branches: CU-rq6ur2_Deploy-sample-app
+    branches: 
+      - master
+      - CU-rq6ur2_Deploy-sample-app
 
 jobs:
   build:
