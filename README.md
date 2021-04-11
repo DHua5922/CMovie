@@ -1,6 +1,27 @@
-# Getting Started with Create React App
+# CMovie
+Website for searching movies.
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+## Technologies
+* React
+* HTML
+* CSS
+* TypeScript
+
+## Deploy to GitHub Pages With CI/CD
+Read this [blog](https://medium.com/swlh/deploy-create-react-app-to-github-pages-using-github-actions-4e95ae7fd65f). The only fix needed in the blog is to add `"homepage": "https://dhua5922.github.io/CMovie"` in `package.json`.
+
+## Workflow
+1. Click on a task to complete from ClickUp.
+2. Click on the GitHub icon.
+3. Copy the branch name and replace the stage branch in `deploy.yml`. Stage branch should be `CU-[task id]_[task name]`.
+4. Copy the command from ClickUp for creating new branch.
+5. Make whatever changes is needed to complete the task.
+6. When done, stage the branch.
+7. Use the commit command from ClickUp.
+8. Push the branch to GitHub. Be sure to click yes when prompted to create a new branch.
+9. Review the changes and make sure they are in the [website](https://www.huadylan.com/CMovie/).
+10. Merge the pull request to master.
+11. In your development environment, switch to master branch.
 
 ## Available Scripts
 
