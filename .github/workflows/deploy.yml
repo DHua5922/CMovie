@@ -3,7 +3,7 @@ on:
   push:
     branches:
       - master
-      - CU-rq6r29_Show-top-rated-movies
+      - CU-rq6r2e_Show-popular-movies
 jobs:
   deploy:
     runs-on: ubuntu-latest

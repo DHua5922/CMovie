@@ -1,12 +1,30 @@
 import MovieSliderSection from "../../components/MovieSliderSection";
-import { useTopRatedMovies } from "../../custom-hooks/movies";
+import { 
+  useTopRatedMovies, 
+  usePopularMovies 
+} from "../../custom-hooks/movies";
 
 function App() {
-  const topMovies = useTopRatedMovies();
+  const movieSections = [
+    {
+      title: "Top Movies",
+      movies: useTopRatedMovies()
+    },
+    {
+      title: "Popular Movies",
+      movies: usePopularMovies()
+    },
+  ];
 
   return (
     <>
-      { topMovies && <MovieSliderSection title="Top Movies" movies={topMovies} /> }
+      {
+        movieSections.map(section => (
+          <>
+            { section.movies && <MovieSliderSection {...section} /> }
+          </>
+        ))
+      }
     </>
   );
 }

@@ -7,6 +7,10 @@ const Image = tw.img`
     h-32
 `;
 
+const Title = tw.div`
+    text-center
+`;
+
 function MovieSlider({ movies, itemsToShow=6, itemPadding=8 }: any) {
     const imgConfiguration = useConfiguration();
 
@@ -16,7 +20,13 @@ function MovieSlider({ movies, itemsToShow=6, itemPadding=8 }: any) {
                 {
                     movies.map((movie: Movie, index: number) => {
                         const { base_url, backdrop_sizes } = imgConfiguration;
-                        return <Image src={base_url + backdrop_sizes[backdrop_sizes.length - 1] + movie.backdrop_path} key={index} />;
+                        const { backdrop_path, title } = movie;
+                        return (
+                            <div>
+                                <Image src={base_url + backdrop_sizes[backdrop_sizes.length - 1] + backdrop_path} key={index} />
+                                <Title>{title}</Title>
+                            </div>
+                        );
                     })
                 }
             </Carousel>
