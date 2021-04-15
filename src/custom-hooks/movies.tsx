@@ -32,7 +32,23 @@ function usePopularMovies() {
     return movies;
 }
 
+function useNowPlayingMovies() {
+  const [movies, setMovies] = useState(null as Movie[] | null);
+
+  useEffect(() => {
+    if(movies) return;  
+    const getMovies = async () => {
+      const response = await api.getNowPlayingMovies();
+      setMovies(response.data.results);
+    };
+    getMovies();
+  }, [movies])
+  
+  return movies;
+}
+
 export { 
   useTopRatedMovies,
-  usePopularMovies
+  usePopularMovies,
+  useNowPlayingMovies
 };
