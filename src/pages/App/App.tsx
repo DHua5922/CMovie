@@ -1,7 +1,8 @@
 import MovieSliderSection from "../../components/MovieSliderSection";
 import { 
   useTopRatedMovies, 
-  usePopularMovies 
+  usePopularMovies,
+  useNowPlayingMovies
 } from "../../custom-hooks/movies";
 
 function App() {
@@ -14,6 +15,10 @@ function App() {
       title: "Popular Movies",
       movies: usePopularMovies()
     },
+    {
+      title: "Now Playing",
+      movies: useNowPlayingMovies()
+    }
   ];
 
   return (
