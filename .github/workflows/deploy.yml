@@ -3,7 +3,7 @@ on:
   push:
     branches:
       - master
-      - CU-rq76dp_Create-Navbar
+      - CU-t53thu_Add-search-bar
 jobs:
   deploy:
     runs-on: ubuntu-latest
