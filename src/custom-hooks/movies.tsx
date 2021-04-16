@@ -47,8 +47,24 @@ function useNowPlayingMovies() {
   return movies;
 }
 
+function useMovieSearch(query: string) {
+  const [movies, setMovies] = useState(null as Movie[] | null);
+
+  useEffect(() => {
+    if(movies) return;  
+    const getMovies = async () => {
+      const response = await api.searchMovies(query);
+      setMovies(response.data.results);
+    };
+    getMovies();
+  }, [movies, query])
+  
+  return movies;
+}
+
 export { 
   useTopRatedMovies,
   usePopularMovies,
-  useNowPlayingMovies
+  useNowPlayingMovies,
+  useMovieSearch
 };

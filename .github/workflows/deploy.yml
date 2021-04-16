@@ -3,7 +3,7 @@ on:
   push:
     branches:
       - master
-      - CU-t53thu_Add-search-bar
+      - CU-t58c51_Create-Movie-Search-Page
 jobs:
   deploy:
     runs-on: ubuntu-latest
