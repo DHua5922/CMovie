@@ -25,9 +25,6 @@ function MainContent() {
     
     return (
         <>
-          <div className="py-4 px-12">
-            <SearchBar />
-          </div>
           {
             movieSections.map(section => (
               <>

@@ -25,27 +25,22 @@ function MainContent() {
     const imgConfiguration = useConfiguration();
 
     return (
-        <>
-            <div className="py-4 px-12">
-                <SearchBar />
-            </div>
-            <Row className="px-12">
-                { imgConfiguration && movies &&
-                    movies.map((movie: Movie, index: number) => {
-                        const { backdrop_sizes, base_url } = imgConfiguration;
-                        const { backdrop_path, title } = movie;
-                        return (
-                            <Col xs="12" sm="6" md="4" lg="3" key={index} className="p-4">
-                                <div className="shadow-md">
-                                    <Image src={base_url + backdrop_sizes[backdrop_sizes.length - 1] + backdrop_path}/>
-                                    <Title>{title}</Title>
-                                </div>
-                            </Col>
-                        );
-                    })
-                }
-            </Row>
-        </>
+        <Row className="px-12">
+            { imgConfiguration && movies &&
+                movies.map((movie: Movie, index: number) => {
+                    const { backdrop_sizes, base_url } = imgConfiguration;
+                    const { backdrop_path, title } = movie;
+                    return (
+                        <Col xs="12" sm="6" md="4" lg="3" key={index} className="p-4">
+                            <div className="shadow-md">
+                                <Image src={base_url + backdrop_sizes[backdrop_sizes.length - 1] + backdrop_path}/>
+                                <Title>{title}</Title>
+                            </div>
+                        </Col>
+                    );
+                })
+            }
+        </Row>
     );
 }
 
