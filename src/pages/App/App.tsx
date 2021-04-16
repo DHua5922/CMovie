@@ -1,36 +1,13 @@
-import MovieSliderSection from "../../components/MovieSliderSection";
-import { 
-  useTopRatedMovies, 
-  usePopularMovies,
-  useNowPlayingMovies
-} from "../../custom-hooks/movies";
+import Home from "../Home/Home";
+import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
 
 function App() {
-  const movieSections = [
-    {
-      title: "Top Movies",
-      movies: useTopRatedMovies()
-    },
-    {
-      title: "Popular Movies",
-      movies: usePopularMovies()
-    },
-    {
-      title: "Now Playing",
-      movies: useNowPlayingMovies()
-    }
-  ];
-
   return (
-    <>
-      {
-        movieSections.map(section => (
-          <>
-            { section.movies && <MovieSliderSection {...section} /> }
-          </>
-        ))
-      }
-    </>
+    <Router basename={process.env.REACT_APP_PUBLIC_URL}>
+      <Switch>
+        <Route exact path="/" component={Home} />
+      </Switch>
+    </Router>
   );
 }
 
