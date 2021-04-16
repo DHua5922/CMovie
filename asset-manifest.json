@@ -1,25 +1,25 @@
 {
   "files": {
-    "main.css": "/CMovie/static/css/main.478052ea.chunk.css",
-    "main.js": "/CMovie/static/js/main.2496a8a5.chunk.js",
-    "main.js.map": "/CMovie/static/js/main.2496a8a5.chunk.js.map",
+    "main.css": "/CMovie/static/css/main.f23e430f.chunk.css",
+    "main.js": "/CMovie/static/js/main.38ed369b.chunk.js",
+    "main.js.map": "/CMovie/static/js/main.38ed369b.chunk.js.map",
     "runtime-main.js": "/CMovie/static/js/runtime-main.a9ce0949.js",
     "runtime-main.js.map": "/CMovie/static/js/runtime-main.a9ce0949.js.map",
     "static/css/2.4c97ca4f.chunk.css": "/CMovie/static/css/2.4c97ca4f.chunk.css",
-    "static/js/2.78022d44.chunk.js": "/CMovie/static/js/2.78022d44.chunk.js",
-    "static/js/2.78022d44.chunk.js.map": "/CMovie/static/js/2.78022d44.chunk.js.map",
+    "static/js/2.653edfe4.chunk.js": "/CMovie/static/js/2.653edfe4.chunk.js",
+    "static/js/2.653edfe4.chunk.js.map": "/CMovie/static/js/2.653edfe4.chunk.js.map",
     "static/js/3.f26ae0b4.chunk.js": "/CMovie/static/js/3.f26ae0b4.chunk.js",
     "static/js/3.f26ae0b4.chunk.js.map": "/CMovie/static/js/3.f26ae0b4.chunk.js.map",
     "index.html": "/CMovie/index.html",
     "static/css/2.4c97ca4f.chunk.css.map": "/CMovie/static/css/2.4c97ca4f.chunk.css.map",
-    "static/css/main.478052ea.chunk.css.map": "/CMovie/static/css/main.478052ea.chunk.css.map",
-    "static/js/2.78022d44.chunk.js.LICENSE.txt": "/CMovie/static/js/2.78022d44.chunk.js.LICENSE.txt"
+    "static/css/main.f23e430f.chunk.css.map": "/CMovie/static/css/main.f23e430f.chunk.css.map",
+    "static/js/2.653edfe4.chunk.js.LICENSE.txt": "/CMovie/static/js/2.653edfe4.chunk.js.LICENSE.txt"
   },
   "entrypoints": [
     "static/js/runtime-main.a9ce0949.js",
     "static/css/2.4c97ca4f.chunk.css",
-    "static/js/2.78022d44.chunk.js",
-    "static/css/main.478052ea.chunk.css",
-    "static/js/main.2496a8a5.chunk.js"
+    "static/js/2.653edfe4.chunk.js",
+    "static/css/main.f23e430f.chunk.css",
+    "static/js/main.38ed369b.chunk.js"
   ]
 }
