@@ -1,6 +1,5 @@
 import MovieSliderSection from "../../components/MovieSliderSection";
 import Page from "../../components/Page";
-import SearchBar from "../../components/SearchBar";
 import { 
   useTopRatedMovies, 
   usePopularMovies,

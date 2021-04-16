@@ -3,7 +3,6 @@ import queryString from "query-string";
 import Page from "../../components/Page";
 import searchActions from "../../redux/actions/searchAction";
 import { useDispatch } from "react-redux";
-import SearchBar from "../../components/SearchBar";
 import { useMovieSearch } from "../../custom-hooks/movies";
 import { Row, Col } from "react-bootstrap";
 import useConfiguration from "../../custom-hooks/configuration";
