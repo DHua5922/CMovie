@@ -2,6 +2,7 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
 import './tailwind.css';
+import 'bootstrap/dist/css/bootstrap.min.css';
 import App from './pages/App/App';
 import reportWebVitals from './reportWebVitals';
 import "./api/request";

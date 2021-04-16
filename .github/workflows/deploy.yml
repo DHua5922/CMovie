@@ -3,7 +3,7 @@ on:
   push:
     branches:
       - master
-      - CU-rq6r81_Show-movies-now-playing
+      - CU-rq76dp_Create-Navbar
 jobs:
   deploy:
     runs-on: ubuntu-latest
