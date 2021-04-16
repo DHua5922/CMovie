@@ -1,8 +1,19 @@
-import { Form, FormControl } from "react-bootstrap";
+import { Form } from "react-bootstrap";
 import { useDispatch } from "react-redux";
 import searchActions from "../redux/actions/searchAction";
 import { useSelector } from "react-redux";
 import { useHistory } from "react-router-dom";
+import tw from "tailwind-styled-components";
+
+const Field = tw.input`
+    focus:border-0
+    w-full
+    focus:outline-none
+    shadow-md
+    rounded-3xl
+    px-4
+    py-2
+`;
 
 function useOnSearchSubmit() {
     const history = useHistory();
@@ -20,9 +31,9 @@ function SearchBar() {
 
     return (
         <Form onSubmit={useOnSearchSubmit()}>
-            <FormControl 
+            <Field 
                 placeholder="Search movies..." 
-                onChange={(evt) => dispatch(searchActions.updateSearchInput(evt.target.value))}
+                onChange={(evt: { target: { value: string; }; }) => dispatch(searchActions.updateSearchInput(evt.target.value))}
                 value={input}
             />
         </Form>
