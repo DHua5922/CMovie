@@ -1,8 +1,8 @@
 {
   "files": {
     "main.css": "/CMovie/static/css/main.6f2b5924.chunk.css",
-    "main.js": "/CMovie/static/js/main.ac145b8e.chunk.js",
-    "main.js.map": "/CMovie/static/js/main.ac145b8e.chunk.js.map",
+    "main.js": "/CMovie/static/js/main.09163005.chunk.js",
+    "main.js.map": "/CMovie/static/js/main.09163005.chunk.js.map",
     "runtime-main.js": "/CMovie/static/js/runtime-main.f619b529.js",
     "runtime-main.js.map": "/CMovie/static/js/runtime-main.f619b529.js.map",
     "static/css/2.4c97ca4f.chunk.css": "/CMovie/static/css/2.4c97ca4f.chunk.css",
@@ -20,6 +20,6 @@
     "static/css/2.4c97ca4f.chunk.css",
     "static/js/2.d7447358.chunk.js",
     "static/css/main.6f2b5924.chunk.css",
-    "static/js/main.ac145b8e.chunk.js"
+    "static/js/main.09163005.chunk.js"
   ]
 }
