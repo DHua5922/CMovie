@@ -3,7 +3,7 @@ on:
   push:
     branches:
       - master
-      - CU-t5bxrb_Make-search-bar-look-nicer
+      - CU-t76ea2_Refactor-search-bar-code
 jobs:
   deploy:
     runs-on: ubuntu-latest

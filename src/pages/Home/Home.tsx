@@ -1,6 +1,5 @@
 import MovieSliderSection from "../../components/MovieSliderSection";
 import Page from "../../components/Page";
-import SearchBar from "../../components/SearchBar";
 import { 
   useTopRatedMovies, 
   usePopularMovies,
@@ -25,9 +24,6 @@ function MainContent() {
     
     return (
         <>
-          <div className="py-4 px-12">
-            <SearchBar />
-          </div>
           {
             movieSections.map(section => (
               <>
