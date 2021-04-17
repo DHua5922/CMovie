@@ -25,6 +25,7 @@ function Page(MainComponent: any) {
                     show={show}
                     onHide={() => dispatch(popupActions.closePopup())}
                     movieInfo={movieInfo}
+                    hasImage={movieInfo.hasImage}
                 />
             </>
         );

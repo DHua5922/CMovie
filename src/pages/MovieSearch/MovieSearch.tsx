@@ -22,13 +22,12 @@ function MainContent() {
             { imgConfiguration && movies &&
                 movies.map((movie: Movie, index: number) => {
                     const formattedMovie: Movie = formatMovie(imgConfiguration, movie);
-                    const { title, backdrop_path } = formattedMovie;
                     return (
                         <Col xs="12" sm="6" md="4" lg="3" key={index} className="p-4">
                             <MovieDisplay 
-                                title={title}
-                                src={backdrop_path}
+                                {...formattedMovie}
                                 onClick={() => dispatch(popupActions.openPopup(formattedMovie))}
+
                             />
                         </Col>
                     );

@@ -11,14 +11,14 @@ const Title = tw.div`
 
 interface Props {
     title: string
-    src: string
+    backdrop_path: string
     onClick: React.MouseEventHandler<HTMLDivElement> | undefined
 }
 
-function MovieDisplay({ title, src, onClick }: Props) {
+function MovieDisplay({ title, backdrop_path, onClick }: Props) {
     return (
         <Container onClick={onClick}>
-            <img src={src} alt="" />
+            <img src={backdrop_path} alt="" />
             <Title>{title}</Title>
         </Container>
     );

@@ -5,9 +5,10 @@ interface Props {
     show: boolean
     onHide: Function
     movieInfo: Movie
+    hasImage: boolean
 }
 
-function MovieInfoPopup({ show, onHide, movieInfo }: Props) {
+function MovieInfoPopup({ show, onHide, movieInfo, hasImage }: Props) {
     const { title, backdrop_path, overview } = movieInfo;
     return (
         <Modal show={show} onHide={onHide} centered>
@@ -15,8 +16,12 @@ function MovieInfoPopup({ show, onHide, movieInfo }: Props) {
                 <Modal.Title>{title}</Modal.Title>
             </Modal.Header>
             <Modal.Body>
-                <img src={backdrop_path} alt="" />
-                <div className="mt-3">{overview}</div>
+                <img
+                    className={hasImage ? "pb-3" : "pb-0" } 
+                    src={backdrop_path} 
+                    alt="" 
+                />
+                <div>{overview}</div>
             </Modal.Body>
         </Modal>
     );

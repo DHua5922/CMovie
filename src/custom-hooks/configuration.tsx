@@ -22,7 +22,8 @@ function formatMovie(configuration: any, movie: Movie): Movie {
   const { backdrop_path } = movie;
   return {
     ...movie,
-    backdrop_path: base_url + backdrop_sizes[backdrop_sizes.length - 1] + backdrop_path
+    backdrop_path: base_url + backdrop_sizes[backdrop_sizes.length - 1] + backdrop_path,
+    hasImage: backdrop_path ? true : false
   };
 }
 

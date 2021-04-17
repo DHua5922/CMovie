@@ -39,12 +39,10 @@ function MovieSlider({ movies }: Props) {
                 {
                     movies.map((movie: Movie, index: number) => {
                         const formattedMovie: Movie = formatMovie(imgConfiguration, movie);
-                        const { title, backdrop_path } = formattedMovie;
                         return (
                             <div className="my-2 mx-3" key={index}>
                                 <MovieDisplay 
-                                    title={title}
-                                    src={backdrop_path}
+                                    {...formattedMovie}
                                     onClick={() => dispatch(popupActions.openPopup(formattedMovie))}
                                 />
                             </div>
