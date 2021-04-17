@@ -37,7 +37,7 @@ function MainContent() {
 
 function Home() {
     const Homepage = Page(MainContent);
-    return <Homepage />
+    return <Homepage title={"" + process.env.REACT_APP_NAME} />;
 }
 
 export default Home;

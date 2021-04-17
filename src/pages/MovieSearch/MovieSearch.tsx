@@ -39,7 +39,8 @@ function MainContent() {
 
 function MovieSearch() {
     const SearchPage = Page(MainContent);
-    return <SearchPage />;
+    const searchQuery: string = queryString.parse(window.location.search).query;
+    return <SearchPage title={`${searchQuery} - ${process.env.REACT_APP_NAME}`} />;
 }
 
 export default MovieSearch;
