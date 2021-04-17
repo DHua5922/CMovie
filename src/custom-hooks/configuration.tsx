@@ -1,5 +1,6 @@
 import { useEffect, useState } from "react";
 import api from "../api/api";
+import Movie from "../types/Movie";
 
 function useConfiguration() {
     const [configuration, setConfiguration] = useState(null as any);
@@ -16,4 +17,14 @@ function useConfiguration() {
     return configuration;
 }
 
-export default useConfiguration;
+function formatMovie(configuration: any, movie: Movie): Movie {
+  const { backdrop_sizes, base_url } = configuration;
+  const { backdrop_path } = movie;
+  return {
+    ...movie,
+    backdrop_path: base_url + backdrop_sizes[backdrop_sizes.length - 1] + backdrop_path,
+    hasImage: backdrop_path ? true : false
+  };
+}
+
+export { useConfiguration, formatMovie };

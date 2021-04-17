@@ -3,7 +3,7 @@ on:
   push:
     branches:
       - master
-      - CU-t76ctn_Show-movie-details-when-clicked-on
+      - CU-t77ygj_Show-movie-image-in-popup
 jobs:
   deploy:
     runs-on: ubuntu-latest

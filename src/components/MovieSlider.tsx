@@ -1,5 +1,5 @@
 import Movie from "../types/Movie";
-import useConfiguration from "../custom-hooks/configuration";
+import { useConfiguration, formatMovie } from "../custom-hooks/configuration";
 import Carousel from "react-multi-carousel";
 import "react-multi-carousel/lib/styles.css";
 import MovieDisplay from "./MovieDisplay";
@@ -38,14 +38,12 @@ function MovieSlider({ movies }: Props) {
             <Carousel responsive={responsive}>
                 {
                     movies.map((movie: Movie, index: number) => {
-                        const { base_url, backdrop_sizes } = imgConfiguration;
-                        const { backdrop_path, title } = movie;
+                        const formattedMovie: Movie = formatMovie(imgConfiguration, movie);
                         return (
                             <div className="my-2 mx-3" key={index}>
                                 <MovieDisplay 
-                                    title={title}
-                                    src={base_url + backdrop_sizes[backdrop_sizes.length - 1] + backdrop_path}
-                                    onClick={() => dispatch(popupActions.openPopup(movie))}
+                                    {...formattedMovie}
+                                    onClick={() => dispatch(popupActions.openPopup(formattedMovie))}
                                 />
                             </div>
                         );
