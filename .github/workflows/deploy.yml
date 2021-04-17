@@ -3,7 +3,7 @@ on:
   push:
     branches:
       - master
-      - CU-t784a6_Update-documentation
+      - CU-t7863h_Replace-app-title-and-icon
 jobs:
   deploy:
     runs-on: ubuntu-latest
