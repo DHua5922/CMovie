@@ -23,7 +23,7 @@ function MainContent() {
     ];
     
     return (
-        <>
+        <div className="px-8 pt-2">
           {
             movieSections.map(section => (
               <>
@@ -31,7 +31,7 @@ function MainContent() {
               </>
             ))
           }
-        </>
+        </div>
     );
 }
 

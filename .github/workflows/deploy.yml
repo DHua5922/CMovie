@@ -3,7 +3,7 @@ on:
   push:
     branches:
       - master
-      - CU-t76ea2_Refactor-search-bar-code
+      - CU-t5by3g_Make-movie-sliders-responsive
 jobs:
   deploy:
     runs-on: ubuntu-latest
