@@ -6,9 +6,13 @@ Website for searching movies.
 * HTML
 * CSS
 * TypeScript
+* Bootstrap
 
 ## Deploy to GitHub Pages With CI/CD
 Read this [blog](https://medium.com/swlh/deploy-create-react-app-to-github-pages-using-github-actions-4e95ae7fd65f). The only fix needed in the blog is to add `"homepage": "https://dhua5922.github.io/CMovie"` in `package.json`.
+
+## Make BrowserRouter Work On GitHub Pages
+Read these [basic instructions](https://github.com/rafgraph/spa-github-pages) for making BrowserRouter work on GitHub Pages.
 
 ## Workflow
 1. Click on a task to complete from ClickUp.
