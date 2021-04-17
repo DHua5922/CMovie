@@ -1,20 +1,17 @@
 import MovieSlider from "./MovieSlider";
 import tw from "tailwind-styled-components";
 
-const Container = tw.div`
-    px-12
-`;
-
 const Title = tw.div`
     text-3xl
+    pb-3
 `;
 
 function MovieSliderSection({ title="", movies }: any) {
     return (
-        <Container>
+        <div className="pt-3">
             <Title>{title}</Title>
             <MovieSlider movies={movies} />
-        </Container>
+        </div>
     );
 }
 

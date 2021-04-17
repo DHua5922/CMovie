@@ -1,15 +1,20 @@
 import MyNavbar from "./Navbar"
 import SearchBar from "./SearchBar";
+import styled from "styled-components";
+
+const MainContainer = styled.div`
+    padding: 30px 8vw;
+`;
 
 function Page(MainComponent: any) {
     return function PageComponent() {
         return (
             <>
                 <MyNavbar />
-                <div className="py-4 px-12">
+                <MainContainer>
                     <SearchBar />
-                </div>
-                <MainComponent />
+                    <MainComponent />
+                </MainContainer>
             </>
         );
     }
