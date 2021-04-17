@@ -1,5 +1,10 @@
 import tw from "tailwind-styled-components";
 
+const Container = tw.div`
+    shadow-md
+    cursor-pointer
+`;
+
 const Title = tw.div`
     text-center
 `;
@@ -12,10 +17,10 @@ interface Props {
 
 function MovieDisplay({ title, src, onClick }: Props) {
     return (
-        <div className="shadow-md" onClick={onClick}>
+        <Container onClick={onClick}>
             <img src={src} alt="" />
             <Title>{title}</Title>
-        </div>
+        </Container>
     );
 }
 

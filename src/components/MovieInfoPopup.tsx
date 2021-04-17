@@ -16,7 +16,7 @@ function MovieInfoPopup({ show, onHide, movieInfo }: Props) {
             </Modal.Header>
             <Modal.Body>
                 <img src={backdrop_path} alt="" />
-                <div>{overview}</div>
+                <div className="mt-3">{overview}</div>
             </Modal.Body>
         </Modal>
     );
