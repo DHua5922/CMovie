@@ -3,7 +3,7 @@ on:
   push:
     branches:
       - master
-      - CU-t5by3g_Make-movie-sliders-responsive
+      - CU-t76ctn_Show-movie-details-when-clicked-on
 jobs:
   deploy:
     runs-on: ubuntu-latest

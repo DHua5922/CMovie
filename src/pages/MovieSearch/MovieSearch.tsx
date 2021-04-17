@@ -6,15 +6,9 @@ import { useDispatch } from "react-redux";
 import { useMovieSearch } from "../../custom-hooks/movies";
 import { Row, Col } from "react-bootstrap";
 import useConfiguration from "../../custom-hooks/configuration";
-import tw from "tailwind-styled-components";
 import Movie from "../../types/Movie";
-
-const Image = tw.img`
-`;
-
-const Title = tw.div`
-    text-center
-`;
+import MovieDisplay from "../../components/MovieDisplay";
+import popupActions from "../../redux/actions/popupAction";
 
 function MainContent() {
     const searchQuery: string = queryString.parse(window.location.search).query;
@@ -31,10 +25,11 @@ function MainContent() {
                     const { backdrop_path, title } = movie;
                     return (
                         <Col xs="12" sm="6" md="4" lg="3" key={index} className="p-4">
-                            <div className="shadow-md">
-                                <Image src={base_url + backdrop_sizes[backdrop_sizes.length - 1] + backdrop_path}/>
-                                <Title>{title}</Title>
-                            </div>
+                            <MovieDisplay 
+                                title={title}
+                                src={base_url + backdrop_sizes[backdrop_sizes.length - 1] + backdrop_path}
+                                onClick={() => dispatch(popupActions.openPopup(movie))}
+                            />
                         </Col>
                     );
                 })

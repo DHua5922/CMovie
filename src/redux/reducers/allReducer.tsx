@@ -1,8 +1,10 @@
 import { combineReducers } from "redux";
 import searchReducer from "./searchReducer";
+import popupReducer from "./popupReducer";
 
 const allReducer = combineReducers({
-    searchReducer
+    searchReducer,
+    popupReducer
 });
 
 export default allReducer;

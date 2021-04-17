@@ -1,15 +1,10 @@
 import Movie from "../types/Movie";
-import tw from "tailwind-styled-components";
 import useConfiguration from "../custom-hooks/configuration";
 import Carousel from "react-multi-carousel";
 import "react-multi-carousel/lib/styles.css";
-
-const Image = tw.img`
-`;
-
-const Title = tw.div`
-    text-center
-`;
+import MovieDisplay from "./MovieDisplay";
+import { useDispatch } from "react-redux";
+import popupActions from "../redux/actions/popupAction";
 
 interface Props {
     movies: Movie[]
@@ -17,6 +12,7 @@ interface Props {
 
 function MovieSlider({ movies }: Props) {
     const imgConfiguration = useConfiguration();
+    const dispatch = useDispatch();
 
     const responsive = {
         superLargeDesktop: {
@@ -45,9 +41,12 @@ function MovieSlider({ movies }: Props) {
                         const { base_url, backdrop_sizes } = imgConfiguration;
                         const { backdrop_path, title } = movie;
                         return (
-                            <div className="my-2 shadow-md mx-3">
-                                <Image src={base_url + backdrop_sizes[backdrop_sizes.length - 1] + backdrop_path} key={index} />
-                                <Title>{title}</Title>
+                            <div className="my-2 mx-3" key={index}>
+                                <MovieDisplay 
+                                    title={title}
+                                    src={base_url + backdrop_sizes[backdrop_sizes.length - 1] + backdrop_path}
+                                    onClick={() => dispatch(popupActions.openPopup(movie))}
+                                />
                             </div>
                         );
                     })
