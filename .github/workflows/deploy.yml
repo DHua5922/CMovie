@@ -3,7 +3,7 @@ on:
   push:
     branches:
       - master
-      - CU-t77ygj_Show-movie-image-in-popup
+      - CU-t784a6_Update-documentation
 jobs:
   deploy:
     runs-on: ubuntu-latest
