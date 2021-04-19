@@ -3,7 +3,7 @@ on:
   push:
     branches:
       - master
-      - CU-t98nv9_hide-credentials
+      - CU-t99cyk_Use-env-in-yml
 jobs:
   deploy:
     runs-on: ubuntu-latest
@@ -20,6 +20,11 @@ jobs:
       run: npm install
     - name: Build page
       run: npm run build
+      env:
+        REACT_APP_API_KEY: ${{ secrets.REACT_APP_API_KEY }}
+        REACT_APP_API_BASE_URL: ${{ secrets.REACT_APP_API_BASE_URL }}
+        REACT_APP_PUBLIC_URL: ${{ secrets.REACT_APP_PUBLIC_URL }}
+        REACT_APP_NAME: ${{ secrets.REACT_APP_NAME }}
     - name: Deploy to gh-pages
       uses: peaceiris/actions-gh-pages@v3
       with:
