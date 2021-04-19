@@ -3,7 +3,7 @@ on:
   push:
     branches:
       - master
-      - CU-t99cyk_Use-env-in-yml
+      - CU-t9a1zv_Fix-404-on-page-refresh
 jobs:
   deploy:
     runs-on: ubuntu-latest
