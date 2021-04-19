@@ -3,7 +3,7 @@ on:
   push:
     branches:
       - master
-      - CU-t7863h_Replace-app-title-and-icon
+      - CU-t98nv9_hide-credentials
 jobs:
   deploy:
     runs-on: ubuntu-latest
